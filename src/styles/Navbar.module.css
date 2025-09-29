@@ -1,0 +1,109 @@
+/* Add this new class to your CSS file */
+.navMenuAndActions {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* Adjust this value to control the space between links and buttons */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #f9fafb;
+  font-family: Arial, sans-serif;
+  flex-wrap: wrap; 
+}
+
+/* ... The rest of your existing CSS classes go here ... */
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.25rem; /* Use rem for font size */
+  color: #1f2937;
+}
+
+.logoIcon {
+  color: #22c55e;
+  margin-right: 0.375rem; /* rem for margin */
+}
+
+.logoText {
+  font-size: 1.25rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 1.5625rem; /* Use rem for gap */
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+}
+
+.navLinks li a:hover {
+  color: #22c55e;
+}
+
+.actions {
+  display: flex;
+  gap: 0.9375rem; /* rem for gap */
+  align-items: center;
+}
+
+.login {
+  color: #22c55e;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup {
+  background-color: #22c55e;
+  color: white;
+  padding: 0.5rem 1.125rem; /* rem for padding */
+  border-radius: 0.375rem; /* rem for border-radius */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup:hover {
+  background-color: #16a34a;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+@media (max-width: 767px) {
+  .navbar {
+    padding: 15px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navLinks {
+    display: none; /* Hide the links on mobile initially */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+
+  /* To be toggled by JS when a menu button is clicked */
+  .navLinks.active {
+    display: flex;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
