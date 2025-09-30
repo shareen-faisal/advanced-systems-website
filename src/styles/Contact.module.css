@@ -38,7 +38,7 @@
   /* Left Info Panel */
   .contactInfo {
     flex: 1 1 350px;
-    background-color: #006400; /* Dark green */
+    background-color: var(--secondaryColor); /* Dark green */
     color: white;
     padding: 2rem;
     display: flex;
