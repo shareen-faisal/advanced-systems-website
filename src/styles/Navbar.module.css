@@ -50,7 +50,7 @@
 }
 
 .navLinks li a:hover {
-  color: #22c55e;
+  color: var(--secondaryColor);
 }
 
 .actions {
