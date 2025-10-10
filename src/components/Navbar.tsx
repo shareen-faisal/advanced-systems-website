@@ -9,7 +9,8 @@ const Navbar: React.FC = () => {
     <nav className={styles.navbar}>
       {/* Logo */}
       <div className={styles.logo}>
-        <span className={styles.logoIcon}>▲</span>
+        {/* <span className={styles.logoIcon}></span> */}
+        <img className={styles.logoIcon} src="/logo.png" alt="advanced-systems-logo" />
         <span className={styles.logoText}>Advanced Systems Limited</span>
       </div>
 
