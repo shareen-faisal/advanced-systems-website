@@ -16,8 +16,8 @@ export default function Footer() {
       <div className={styles.topLinks}>
         <a href="#">Home</a>
         <a href="#">About Us</a>
-        <a href="#">Products</a>
-        <a href="#">Services</a>
+        <a href="/#products">Products</a>
+        {/* <a href="#">Services</a> */}
         <a href="/contact">Contact</a>
       </div>
 

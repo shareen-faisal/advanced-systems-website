@@ -18,17 +18,17 @@ const Navbar: React.FC = () => {
         {/* Menu Links */}
         <ul className={styles.navLinks}>
           <li><Link href="/">Home</Link></li>
-          <li><Link href="/service">Products</Link></li>
-          <li><Link href="/feature">About Us</Link></li>
-          <li><Link href="/product">Contact Us</Link></li>
+          <li><Link href="/#products">Products</Link></li>
+          <li><Link href="/">About Us</Link></li>
+          <li><Link href="/contact">Contact Us</Link></li>
           {/* <li><Link href="/testimonial">Testimonial</Link></li> */}
           {/* <li><Link href="/faq">FAQ</Link></li> */}
         </ul>
 
         {/* Buttons */}
         <div className={styles.actions}>
-          <Link href="/login" className={styles.login}>Login</Link>
-          <Link href="/signup" className={styles.signup}>Sign up</Link>
+          {/* <Link href="/login" className={styles.login}>Login</Link>
+          <Link href="/signup" className={styles.signup}>Sign up</Link> */}
         </div>
       </div>
     </nav>
