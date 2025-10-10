@@ -28,7 +28,9 @@
 .subtitle {
   font-size: 1rem;
   font-weight: 600;
-  color: #1e90ff;
+  /* color: #1e90ff; */
+  /* color: var(--foreground); */
+  color: var(--secondaryColor);
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -42,7 +44,8 @@
 }
 
 .title span {
-  color: #1e90ff;
+  /* color: #1e90ff; */
+  color: var(--secondaryColor);
 }
 
 .description {
@@ -76,7 +79,8 @@
 
 .icon {
   font-size: 2.2rem;
-  color: #1e90ff;
+  /* color: #1e90ff; */
+  color: var(--secondaryColor);
   margin-bottom: 0.8rem;
 }
 
@@ -101,7 +105,8 @@
 }
 
 .footer span {
-  color: #1e90ff;
+  /* color: #1e90ff; */
+  color: var(--secondaryColor);
   font-weight: 700;
 }
 
