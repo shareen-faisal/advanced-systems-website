@@ -13,6 +13,11 @@
   background-color: #f9fafb;
   font-family: Arial, sans-serif;
   flex-wrap: wrap; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 /* ... The rest of your existing CSS classes go here ... */

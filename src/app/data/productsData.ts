@@ -98,7 +98,7 @@ export interface Feature {
       title: "Intelligent Air Purifier",
       tagline: "AI-Based Air-Purity Control Extends filter Life",
       image1: "/AirPurifier.jpg",
-      image2:'/AirPurifierFilter.jpg',
+      image2:'/Air-Purifier-Broucher-4..png',
       usps: [
         "AI-Based Air-Purity Control Extends filter Life",
         "Air Quality index Measurement by Laser Sensor",
@@ -147,9 +147,9 @@ export interface Feature {
       title: "Intelligent Electric Geyser",
       tagline: "e-NORIS Intelligent Geyser is a sophisticated microprocessor-based system.",
       image1: "/eNoris.jpg", 
-      image2: "/eNoris.jpg", 
+      image2: "/eNORIS-Poster.jpg", 
       usps: [
-        "Intelligent Operation (Hassle-free and Bluetooth-controlled)",
+        "Intelligent Operation (Bluetooth-controlled)",
         "Two Time Settings",
         "No Water/Dry-Run Protection",
         "Electric Shock Protection",
@@ -196,7 +196,7 @@ export interface Feature {
       title: "Intelligent Hybrid Geyser",
       tagline: "NORIS Intelligent Geyser is a sophisticated microprocessor-based system.",
       image1: "/Noris.png", 
-      image2: "/Noris.png", 
+      image2: "/NORIS-Poster.jpg", 
       usps: [
         "Bluetooth Controlled",
         "Gas Detection & Ignition (Pilotless and Hassle-free)",

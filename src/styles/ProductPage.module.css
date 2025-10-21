@@ -1,4 +1,70 @@
-.wrapper {
+.productPageContainer {
+        --primaryColor: #0d9488;
+        --sectionBgColor: #f8fafc;
+        --borderColor: #e2e8f0;
+        --primaryTextColor: #1e293b;
+        --secondaryTextColor: #475569;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        color: var(--primaryTextColor);
+      }
+      .sectionTitle { font-size: 2.25rem; font-weight: 800; margin-bottom: 3rem; text-align: center; }
+      .productHero { display: grid; grid-template-columns: 1fr; gap: 3rem; margin-bottom: 4rem; align-items: flex-start; }
+      .imageGallery { display: flex; flex-direction: column; gap: 1rem; }
+      .mainImage img { width: 100%; border-radius: 0.75rem; border: 1px solid var(--borderColor); aspect-ratio: 1 / 1; object-fit: contain; }
+      .thumbnailList { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+      .thumbnail { border-radius: 0.5rem; border: 2px solid transparent; cursor: pointer; transition: border-color 0.2s; overflow: hidden; }
+      .thumbnail:hover { border-color: var(--primaryColor); }
+      .thumbnail img { width: 100%; display: block; aspect-ratio: 1 / 1; object-fit: cover; }
+      .thumbnailActive { border-color: var(--primaryColor); }
+      .productTitle { font-size: 2.5rem; font-weight: 900; margin-bottom: 0.5rem; }
+      .productTagline { font-size: 1.125rem; color: var(--secondaryTextColor); margin-bottom: 2rem; }
+      .productBenefitsList h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; }
+      .productBenefitsList ul { list-style: none; padding: 0; }
+      .productBenefitsList li { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.75rem; color: var(--secondaryTextColor); text-align: left;}
+      .productBenefitsList li svg { width: 1.25rem; height: 1.25rem; color: var(--primaryColor); flex-shrink: 0; margin-top: 0.2em; /* Adjust icon alignment */ }
+      .featuresSection { padding: 4rem 0; }
+      .featuresGrid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+      .featureCard { 
+        background-color: white; 
+        padding: 2rem; 
+        border-radius: 0.75rem; 
+        border: 1px solid var(--borderColor); 
+        text-align: center; 
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .featureCard:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      }
+      .featureIcon { color: var(--primaryColor); width: 3rem; height: 3rem; margin: 0 auto 1rem; }
+      .featureTitle { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+      .featureDescription { color: var(--secondaryTextColor); line-height: 1.6; }
+      .uspsAndSpecsSection { display: grid; grid-template-columns: 1fr; gap: 4rem; background-color: var(--sectionBgColor); padding: 4rem 2rem; border-radius: 1rem; margin-top: 4rem; }
+      .uspsContainer .sectionTitle, .specsContainer .sectionTitle { text-align: left; font-size: 1.75rem; }
+      .uspsGrid { display: flex; flex-direction: column; gap: 1rem; }
+      .uspItem { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 1.125rem; text-align: left; }
+      .uspItem svg { width: 1.5rem; height: 1.5rem; color: var(--primaryColor); margin: 0; flex-shrink: 0; margin-top: 0.2em; }
+      .specsTable { width: 100%; border-collapse: collapse; background-color: white; border-radius: 0.5rem; overflow: hidden; }
+      .specsTable td { padding: 1rem; border-bottom: 1px solid var(--borderColor); }
+      .specsTable tr:last-child td { border-bottom: none; }
+      .specsTable td:first-child { font-weight: 600; }
+      @media (min-width: 768px) {
+        .productHero { grid-template-columns: 0.8fr 1.2fr; }
+        .featuresGrid { grid-template-columns: repeat(2, 1fr); }
+        .uspsAndSpecsSection { grid-template-columns: 1fr 1fr; }
+      }
+      @media (min-width: 1024px) {
+        .featuresGrid { grid-template-columns: repeat(3, 1fr); }
+        .productTitle { font-size: 3rem; }
+      }
+
+
+
+/* .wrapper {
     max-width: 1100px;
     margin: 0 auto;
     padding: 3rem 1.5rem;
@@ -10,6 +76,7 @@
     font-size: 2.5rem;
     font-weight: 700;
     color: black;
+    /* color: var(--secondaryColor); 
     margin-bottom: 0.5rem;
     text-align: center;
   }
@@ -22,13 +89,13 @@
     margin-bottom: 2rem;
   }
   
-  /* USP badges */
   .usps {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.8rem;
     margin-bottom: 2rem;
+
   }
   
   .usp {
@@ -39,14 +106,15 @@
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 500;
+    border-color: var(--secondaryColor);
   }
   
-  /* Hero Section */
+  
   .hero {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     align-items: center;
   }
   
@@ -55,9 +123,9 @@
     min-width: 300px;
     text-align: center;
     padding: 1.5rem;
-    border: 1px solid #e0e0e0; /* subtle outline */
+    border: 1px solid #e0e0e0; 
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* soft shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
     background: #fff;
   }
   
@@ -73,16 +141,15 @@
   .heroImage img {
     max-width: 100%;
     max-height: 450px;
-    /* border-radius: 12px; */
-    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); */
+    
   }
   
-  /* Hero + Features Row */
+ 
   .heroWithFeatures {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     align-items: flex-start;
   }
   
@@ -103,7 +170,7 @@
     gap: 1rem;
   }
   
-  /* Feature Cards */
+ 
   .featureCard {
     border: 1px solid #eaeaea;
     border-radius: 10px;
@@ -129,7 +196,7 @@
     line-height: 1.5;
   }
   
-  /* Benefits + Specs Row */
+
   .benefitsSpecsRow {
     display: flex;
     flex-wrap: wrap;
@@ -154,7 +221,7 @@
     line-height: 1.6;
   }
   
-  /* Specs Table */
+
   .specsTable {
     width: 100%;
     border-collapse: collapse;
@@ -170,6 +237,7 @@
   .specsTable td:first-child {
     font-weight: 600;
     background: #f9f9f9;
+    
     width: 40%;
   }
 
@@ -181,7 +249,7 @@
 }
 
   
-  /* Responsive */
+  
   @media (max-width: 900px) {
     .hero,
     .heroWithFeatures,
@@ -193,4 +261,4 @@
       text-align: center;
     }
   }
-  
+   */

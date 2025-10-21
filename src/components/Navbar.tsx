@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
         <ul className={styles.navLinks}>
           <li><Link href="/">Home</Link></li>
           <li><Link href="/#products">Products</Link></li>
-          <li><Link href="/">About Us</Link></li>
+          <li><Link href="/about">About Us</Link></li>
           <li><Link href="/contact">Contact Us</Link></li>
           {/* <li><Link href="/testimonial">Testimonial</Link></li> */}
           {/* <li><Link href="/faq">FAQ</Link></li> */}
