@@ -28,12 +28,11 @@
 .subtitle {
   font-size: 1rem;
   font-weight: 600;
-  /* color: #1e90ff; */
-  /* color: var(--foreground); */
   color: var(--secondaryColor);
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .title {
@@ -41,16 +40,16 @@
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.3;
+  text-align: center;
 }
 
 .title span {
-  /* color: #1e90ff; */
   color: var(--secondaryColor);
 }
 
 .description {
   font-size: 1rem;
-  color: #555;
+  color: var(--secondaryTextColor);
   margin-bottom: 1rem;
   line-height: 1.6;
   text-align: justify;
@@ -79,7 +78,6 @@
 
 .icon {
   font-size: 2.2rem;
-  /* color: #1e90ff; */
   color: var(--secondaryColor);
   margin-bottom: 0.8rem;
 }
@@ -101,11 +99,10 @@
   margin-top: 1.5rem;
   font-size: 1rem;
   font-weight: 500;
-  color: #333;
+  color: var(--primaryTextColor);
 }
 
 .footer span {
-  /* color: #1e90ff; */
   color: var(--secondaryColor);
   font-weight: 700;
 }

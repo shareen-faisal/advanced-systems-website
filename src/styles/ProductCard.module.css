@@ -3,7 +3,7 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1rem;
-    background: #fff;
+    background: var(--background);
     text-align: center;
     transition: transform 0.2s ease;
   }
@@ -25,12 +25,12 @@
     font-size: 1.1rem;
     font-weight: 600;
     margin: 0.5rem 0;
-    color: #171717;
+    color: var(--primaryTextColor);
   }
   
   .price {
     font-size: 1rem;
     font-weight: bold;
-    color: var(--primaryColor); 
+    color: var(--secondaryColor); 
   }
   

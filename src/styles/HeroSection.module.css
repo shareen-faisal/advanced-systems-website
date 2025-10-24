@@ -1,143 +1,129 @@
- /* General styling for the hero section wrapper */
-    .heroSection {
-      --secondaryColor: #22c55e;
-      --secondaryColor-hover: #16a34a;
-      --primaryTextColor: #1f2937;
-      --secondaryTextColor: #4b5563;
-      background-color: #ffffff; /* Equivalent to Tailwind's bg-gray-50 */
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    }
+.heroContainer {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 1.5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
 
-    /* Container to manage width, padding, and centering */
-    .heroContainer {
-      width: 100%;
-      max-width: 100%; /* Corresponds to container widths in Tailwind */
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 2rem;
-      padding-right: 1.5rem;
-      padding-top: 4rem;
-      padding-bottom: 4rem; 
-    }
+.heroContentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
 
-    /* Flexbox wrapper for the content and icon */
-    .heroContentWrapper {
-      display: flex;
-      flex-direction: column; /* Stacks vertically on mobile by default */
-      align-items: center;
-      justify-content: space-between;
-      gap: 3rem; /* 48px */
-    }
+.textContent {
+  width: 100%;
+  text-align: center;
+  order: 2;
+}
 
-    /* Container for the text content */
-    .textContent {
-      width: 100%;
-      text-align: center;
-      order: 2; /* Shows below the icon on mobile */
-    }
+.textContent h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--primaryTextColor);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+}
 
-    .textContent h1 {
-      font-size: 2.25rem; /* 36px */
-      font-weight: 800; /* extrabold */
-      color: var(--primaryTextColor);
-      line-height: 1.2;
-      margin-bottom: 1rem; /* 16px */
-      margin-top: 4rem;
-    }
+.textContent p {
+  font-size: 1.125rem;
+  color: var(--secondaryTextColor);
+  margin-bottom: 4rem;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    .textContent p {
-      font-size: 1.125rem; /* 18px */
-      color: var(--secondaryTextColor);
-      margin-bottom: 4rem; /* 32px */
-      max-width: 32rem; /* 512px */
-      margin-left: auto;
-      margin-right: auto;
+.heroButton {
+  background-color: var(--secondaryColor);
+  color: white;
+  font-weight: 700;
+  padding: 1.2rem 2.2rem;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
 
-    }
+.heroButton:hover {
+  background-color: var(--secondaryColor-hover);
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.4),
+    0 4px 6px -2px rgba(34, 197, 94, 0.4);
+}
 
-    /* Main call-to-action button */
-    .heroButton {
-      background-color: var(--secondaryColor);
-      color: white;
-      font-weight: 700; /* bold */
-      padding: 1.2rem 2.2rem; 
-      border-radius: 0.5rem; /* rounded-lg */
-      font-size: 1.125rem; /* 18px */
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    }
+.iconContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  order: 1;
+}
 
-    .heroButton:hover {
-      background-color: var(--secondaryColor-hover);
-      transform: scale(1.05);
-      box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.4), 0 4px 6px -2px rgba(34, 197, 94, 0.4);
-    }
+.smartDropletIcon {
+  width: 12rem;
+  height: 12rem;
+  color: var(--secondaryColor);
+}
 
-    /* Container for the icon */
-    .iconContainer {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      order: 1; /* Shows above the text on mobile */
-    }
+/* --- Responsive Design --- */
 
-    /* Styling for the SmartDroplet SVG icon */
-    .smartDropletIcon {
-      width: 12rem; /* 192px */
-      height: 12rem; /* 192px */
-      color: var(--secondaryColor);
-    }
+/* For tablets and larger screens (768px and up) */
+@media (min-width: 768px) {
+  .heroContainer {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 
-    /* --- Responsive Design --- */
+  .heroContentWrapper {
+    flex-direction: row;
+  }
 
-    /* For tablets and larger screens (768px and up) */
-    @media (min-width: 768px) {
-      .heroContainer {
-        padding-top: 6rem; /* 96px */
-        padding-bottom: 6rem; /* 96px */
-      }
+  .textContent {
+    width: 50%;
+    text-align: left;
+    order: 1;
+  }
 
-      .heroContentWrapper {
-        flex-direction: row; /* Side-by-side layout */
-      }
+  .textContent h1 {
+    font-size: 3rem;
+  }
 
-      .textContent {
-        width: 50%;
-        text-align: left;
-        order: 1; /* Moves to the left side */
-      }
-      
-      .textContent h1 {
-        font-size: 3rem; /* 48px */
-      }
+  .textContent p {
+    font-size: 1.25rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
 
-      .textContent p {
-        font-size: 1.25rem; /* 20px */
-        margin-left: 0;
-        margin-right: 0;
-      }
-      
-      .iconContainer {
-        width: 50%;
-        justify-content: flex-end;
-        order: 2; /* Moves to the right side */
-      }
+  .iconContainer {
+    width: 50%;
+    justify-content: flex-end;
+    order: 2;
+  }
 
-      .smartDropletIcon {
-        width: 16rem; /* 256px */
-        height: 16rem; /* 256px */
-      }
-    }
+  .smartDropletIcon {
+    width: 16rem;
+    height: 16rem;
+  }
+}
 
-    /* For large screens (1024px and up) */
-    @media (min-width: 1024px) {
-      .textContent h1 {
-        font-size: 3.75rem; /* 60px */
-      }
-      .smartDropletIcon {
-        width: 20rem; /* 320px */
-        height: 20rem; /* 320px */
-      }
-    }
+/* For large screens (1024px and up) */
+@media (min-width: 1024px) {
+  .textContent h1 {
+    font-size: 3.75rem;
+  }
+  .smartDropletIcon {
+    width: 20rem;
+    height: 20rem;
+  }
+}

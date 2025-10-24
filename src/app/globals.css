@@ -2,7 +2,10 @@
   --background: #ffffff;
   --foreground: #171717;
   --primaryColor: #006633;
-  --secondaryColor: #22c55e
+  --secondaryColor: #22c55e;
+  --secondaryColor-hover: #16a34a;
+  --primaryTextColor: #1f2937;
+  --secondaryTextColor: #4b5563;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -22,7 +25,10 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
