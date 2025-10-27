@@ -5,30 +5,53 @@ import styles from "../styles/Navbar.module.css";
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const closeMobileMenu = () => {
     setIsOpen(false);
   };
 
+  // const handleNavClick = (
+  //   e: React.MouseEvent<HTMLAnchorElement>,
+  //   href: string
+  // ) => {
+  //   if (href.startsWith("/#")) {
+  //     e.preventDefault();
+
+  //     const elementId = href.substring(2); 
+  //     const element = document.getElementById(elementId);
+
+  //     if (element) {
+  //       element.scrollIntoView({ behavior: "smooth" });
+  //     }
+  //   }
+
+  //   closeMobileMenu();
+  // };
+
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string
   ) => {
-    if (href.startsWith("/#")) {
-      e.preventDefault();
+    // Check if it's an anchor link AND we are on the homepage
+    if (href.startsWith("/#") && pathname === "/") {
+      e.preventDefault(); // Stop default ONLY if on homepage
 
-      const elementId = href.substring(2); 
+      const elementId = href.substring(2);
       const element = document.getElementById(elementId);
 
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
     }
+    // For all other links (including /#products when NOT on homepage),
+    // let the default <Link> behavior handle navigation.
 
-    closeMobileMenu();
+    closeMobileMenu(); // Close menu regardless
   };
 
   return (

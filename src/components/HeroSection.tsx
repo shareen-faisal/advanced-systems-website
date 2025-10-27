@@ -1,23 +1,23 @@
-import React from 'react';
-import  Icon  from './Icon';
+import React from "react";
+import Icon from "./Icon";
 import styles from "../styles/HeroSection.module.css";
 
 const HeroSection: React.FC = () => {
   return (
     <>
-      
       <div className={styles.heroSection}>
         <div className={styles.heroContainer}>
           <div className={styles.heroContentWrapper}>
-            {/* Left Side: Text Content */}
             <div className={styles.textContent}>
               <h1>
-                 Master Your
+                Smart Comfort,
                 <br />
-                Home Environment.
+                Smarter Living.
               </h1>
               <p>
-                From purifying the air you breathe to heating the water you use, take complete control of your home's essential elements.
+                Experience effortless control over your water heating and air
+                quality. Advanced Systems brings you intelligent geysers and air
+                purifiers designed for efficiency and modern living.
               </p>
               {/* <button className={styles.heroButton}>
                 See Our Collection
@@ -36,6 +36,5 @@ const HeroSection: React.FC = () => {
     </>
   );
 };
-
 
 export default HeroSection;

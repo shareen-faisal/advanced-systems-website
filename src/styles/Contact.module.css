@@ -1,3 +1,5 @@
+/* ... other styles ... */
+
 .contactSection {
   display: flex;
   flex-direction: column;
@@ -5,6 +7,7 @@
   align-items: center;
   padding: 3rem 1rem;
   background-color: var(--background);
+  margin-top: 4rem;
 }
 
 .contactContainer {
@@ -162,10 +165,258 @@
   text-align: center;
   margin-top: 1rem;
   font-weight: 500;
-  color: var(--secondaryColor); 
+  color: var(--secondaryColor);
 }
 
 /* --- Validation Error Styles --- */
+.errorText {
+  color: #d93025;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.invalidInput {
+  border-bottom-color: #d93025 !important;
+}
+
+/* --- UPDATED NOTIFICATION STYLES --- */
+.notification {
+  position: fixed;
+  /* Mobile-first: 1rem margin on sides, centered if max-width is hit */
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  width: auto; /* Width will be 100% - 2rem */
+  max-width: 450px; /* Max width on any screen */
+  margin-left: auto;  /* This pair will center it */
+  margin-right: auto; /* if max-width is reached */
+
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+  z-index: 100;
+  box-sizing: border-box; /* Include padding in width */
+  text-align: left;
+}
+
+.notification.success {
+  background-color: #34a853;
+  color: white;
+}
+
+.notification.error {
+  background-color: #d93025;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contactContainer {
+    flex-direction: column;
+  }
+
+  .contactInfo,
+  .contactForm {
+    padding: 1.5rem;
+  }
+
+  .submitBtn {
+    align-self: stretch;
+  }
+}
+
+/* Desktop styles for notification */
+@media (min-width: 768px) {
+  .notification {
+    /* On desktop, move to top-right */
+    top: 5rem;
+    left: auto;
+    right: 2rem;
+    width: auto; /* Let content size define width */
+    min-width: 300px; /* Set a min-width */
+    margin-left: auto; /* Reset mobile margin */
+    margin-right: 0;  /* Reset mobile margin */
+  }
+}
+
+
+
+
+
+/* .contactSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  background-color: var(--background);
+  margin-top: 4rem;  
+
+}
+
+.contactContainer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--primaryTextColor);
+}
+
+.header p {
+  font-size: 1rem;
+  color: var(--secondaryTextColor);
+}
+
+
+.contactInfo {
+  flex: 1 1 350px;
+  background-color: var(--secondaryColor);
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contactInfo h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contactInfo p {
+  margin-bottom: 2rem;
+  color: #e6e6e6;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+}
+
+.infoItem > svg {
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.phoneNumbers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.socialIcons a {
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.2s ease;
+}
+
+.socialIcons a:hover {
+  color: #ddd;
+}
+
+
+.contactForm {
+  flex: 2 1 500px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.inputGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 250px;
+}
+
+.inputGroup label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--secondaryTextColor);
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  padding: 0.7rem;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+  background: transparent;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  border-color: var(--secondaryColor);
+}
+
+.inputGroup textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.submitBtn {
+  background-color: var(--secondaryColor);
+  color: white;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  align-self: flex-end;
+}
+
+.submitBtn:hover {
+  background-color: var(--secondaryColor-hover);
+  transform: translateY(-2px);
+}
+
+.statusMessage {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: var(--secondaryColor); 
+}
+
+
 .errorText {
   color: #d93025;
   font-size: 0.8rem;
@@ -202,7 +453,7 @@
   color: white;
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
   .contactContainer {
     flex-direction: column;
@@ -216,4 +467,4 @@
   .submitBtn {
     align-self: stretch;
   }
-}
+} */

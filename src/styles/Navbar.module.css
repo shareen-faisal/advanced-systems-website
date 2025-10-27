@@ -5,7 +5,11 @@
   padding: 1rem 2rem;
   background-color: var(--background);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: relative;
+  /* position: relative; */
+  position: fixed; /* Fixes the navbar to the viewport */
+  top: 0;          /* Aligns it to the top */
+  left: 0;         /* Aligns it to the left */
+  width: 100%;     /* Makes it span the full width */
   z-index: 50;
 }
 

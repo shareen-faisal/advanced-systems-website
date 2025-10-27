@@ -5,19 +5,20 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
+  margin-top: 4rem;
   color: var(--primaryTextColor);
 }
 .sectionTitle {
   font-size: 2.25rem;
   font-weight: 800;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   text-align: center;
 }
 .productHero {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   align-items: flex-start;
 }
 .imageGallery {
