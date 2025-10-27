@@ -7,7 +7,7 @@ import { useState } from "react";
 
 interface ProductPageProps {
   product: ProductData;
-  searchParams?: { [key: string]: string | string[] | undefined };
+  // searchParams?: { [key: string]: string | string[] | undefined };
 }
 
 const FeatureIcon: React.FC<{ icon: string }> = ({ icon }) => (
