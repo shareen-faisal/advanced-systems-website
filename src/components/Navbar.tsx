@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
   //   if (href.startsWith("/#")) {
   //     e.preventDefault();
 
-  //     const elementId = href.substring(2); 
+  //     const elementId = href.substring(2);
   //     const element = document.getElementById(elementId);
 
   //     if (element) {
@@ -48,22 +48,20 @@ const Navbar: React.FC = () => {
         element.scrollIntoView({ behavior: "smooth" });
       }
     }
-    // For all other links (including /#products when NOT on homepage),
-    // let the default <Link> behavior handle navigation.
 
-    closeMobileMenu(); // Close menu regardless
+    closeMobileMenu(); 
   };
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo}>
+      <Link href="/" className={styles.logo} onClick={closeMobileMenu}>
         <img
           className={styles.logoIcon}
           src="/logo.png"
           alt="advanced-systems-logo"
         />
         <span className={styles.logoText}>Advanced Systems Limited</span>
-      </div>
+      </Link>
 
       {/* --- Desktop Menu --- */}
       <div className={styles.desktopMenu}>
