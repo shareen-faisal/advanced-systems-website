@@ -1,20 +1,17 @@
 import { notFound } from "next/navigation";
-import { products } from "@/app/data/productsData";
+import { products, ProductData } from "@/app/data/productsData";
 import ProductPage from "@/components/ProductPage";
 
-interface ProductSlugPageProps {
-  params: {
-    slug: string;
-  };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
+type ParamsType = Promise<{ slug: string }>;
 
-export default function ProductSlugPage({ params }: ProductSlugPageProps) {
-  const product = products.find((p) => p.slug === params.slug);
+export default async function ProductSlugPage(props: { params: ParamsType }) {
+  const { slug } = await props.params;
 
-  if (!product) {
-    return notFound(); // Shows Next.js 404 page
-  }
+  const product: ProductData | undefined = products.find(
+    (p) => p.slug === slug
+  );
+
+  if (!product) return notFound();
 
   return <ProductPage product={product} />;
 }
